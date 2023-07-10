@@ -1,15 +1,14 @@
-const express = require('express');
-const { spawn } = require('child_process');
+import express from 'express';
+import { spawn } from 'child_process';
 
 const app = express();
 
 let programProcess;
 
 const startProgram = () => {
-  // Replace 'program-command' with the actual command to run your program
-  const programCommand = 'node my-program.js';
 
-  programProcess = spawn(programCommand);
+
+  programProcess = spawn("yarn",["start-kusama"]);
 
   programProcess.stdout.on('data', (data) => {
     console.log(`Program stdout: ${data}`);
@@ -38,8 +37,8 @@ const stopProgram = () => {
   programProcess = null;
 };
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(4000, () => {
+  console.log('Server is running on port 4000');
 
   startProgram();
 });

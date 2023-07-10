@@ -2,19 +2,21 @@
   "name": "chopsticks-ordum",
   "version": "1.0.0",
   "description": "Kusama & Polkadot simulation network",
-  "main": "index.js",
+  "main": "app.js",
   "author": "MrishoLukamba@Ordum",
   "license": "MIT",
   "scripts": {
     "start": "node app.js",
-    "start-kusama":"npx @acala-network/chopsticks@latest -c kusama",
-    "start-polkadot":"npx @acala-network/chopsticks@latest -c polkadot",
-    "start-all":"npx @acala-network/chopsticks@latest -c kusama && npx @acala-network/chopsticks@latest -c polkadot"
+    "start-kusama": "npx @acala-network/chopsticks@latest -c kusama",
+    "start-polkadot": "npx @acala-network/chopsticks@latest -c polkadot",
+    "start-all": "npx @acala-network/chopsticks@latest -c kusama && npx @acala-network/chopsticks@latest -c polkadot"
   },
   "dependencies": {
+    "child-process": "^1.0.2",
     "express": "^4.18.2"
   },
   "engines": {
     "node": ">=14"
-  }
+  },
+  "type": "module"
 }
