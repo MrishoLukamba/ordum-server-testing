@@ -12,6 +12,7 @@
     "start-all": "npx @acala-network/chopsticks@latest -c kusama && npx @acala-network/chopsticks@latest -c polkadot"
   },
   "dependencies": {
+    "@acala-network/chopsticks": "^0.6.6",
     "child-process": "^1.0.2",
     "express": "^4.18.2"
   },
